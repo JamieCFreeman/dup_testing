@@ -1,0 +1,11 @@
+FileNotFoundError in line 23 of /home/jamie/dup_testing/Snakefile:
+[Errno 2] No such file or directory: 'units.tsv'
+  File "/home/jamie/dup_testing/Snakefile", line 23, in <module>
+  File "/home/jamie/.conda/envs/snakemake/lib/python3.9/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+  File "/home/jamie/.conda/envs/snakemake/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 683, in read_table
+  File "/home/jamie/.conda/envs/snakemake/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+  File "/home/jamie/.conda/envs/snakemake/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+  File "/home/jamie/.conda/envs/snakemake/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+  File "/home/jamie/.conda/envs/snakemake/lib/python3.9/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+  File "/home/jamie/.conda/envs/snakemake/lib/python3.9/site-packages/pandas/io/parsers/base_parser.py", line 222, in _open_handles
+  File "/home/jamie/.conda/envs/snakemake/lib/python3.9/site-packages/pandas/io/common.py", line 701, in get_handle

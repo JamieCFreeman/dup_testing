@@ -1,0 +1,5 @@
+Building DAG of jobs...
+MissingInputException in line 103 of /home/jamie/dup_testing/Snakefile:
+Missing input files for rule bwa_mem:
+/home/jamie/EF_genomes/210728_AHCHLLDSX2/6Jul21-10_S111_L003_R2_001.fastq.gz
+/home/jamie/EF_genomes/210728_AHCHLLDSX2/6Jul21-10_S111_L003_R1_001.fastq.gz
