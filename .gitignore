@@ -1,4 +1,4 @@
-/.dup_test
+/dup_test
 /.snakemake
-/.results
-/.dmel_ref
+/results
+/dmel_ref
