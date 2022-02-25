@@ -109,9 +109,9 @@ rule bwa_mem:
 	log:  f"{OUTDIR}/logs/bwa_mem/{{sample}}_map1.log"
 	output:
 		temp(f"{OUTDIR}/bwa_mem/{{sample}}.bam")
-	threads: 8
+	threads: 4
 	shell:
-		"bwa mem -M -t {threads} {params.REF} {input.fq1} {input.fq2} | samtools view -bS - > {output}"
+		"bwa mem -M -t {threads} {params.REF} {input.fq1} {input.fq2} 2> {log} | samtools view -bS - > {output}"
 
 rule flagstat:
 	input:
@@ -205,6 +205,9 @@ rule summary_partion:
                 expand(f"{OUTDIR}/logs/dupl_partition/{{sample}}_le150.stats", sample=SAMPLES)
 	output:
 		f"{OUTDIR}/logs/summary_stats/dupl_partition_summary.txt"
+	params:
+		indir = f"{OUTDIR}/logs/dupl_partition",
+		outdir = f"{OUTDIR}/logs/summary_stats"	
 	shell:
-		"./helper_scripts/partition_dup_summary.sh"
+		"./helper_scripts/partition_dup_summary.sh {params.indir} {params.outdir}"
 
